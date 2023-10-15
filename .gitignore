@@ -1,0 +1,6 @@
+obj/
+*.csproj
+*.json
+*.cache
+*.props
+*.targets
