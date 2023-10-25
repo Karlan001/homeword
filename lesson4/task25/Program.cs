@@ -19,7 +19,7 @@ int Expon(int num1, int num2)
     return result;
 }
 
-int number1 = GetNumber("Введи число");
-int number2 = GetNumber("Введи число");
+int number1 = GetNumber("Введи первое число");
+int number2 = GetNumber("Введи второе число");
 
 Console.WriteLine(Expon(number1, number2));
