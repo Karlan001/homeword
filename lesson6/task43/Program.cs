@@ -38,9 +38,9 @@ bool dotCross(double num1, double num2) // Проврка на одинаков�
 
 (double, double) calculate(int[] array) // Подсчет координат и возврат 2 переменных
 {
-    double numX = (array[2] - array[3]) / (array[0] - array[1]);
-    double num1 = array[0] * numX + array[2];
-    double num2 = array[1] * numX + array[3];
+    double numX = (array[1] - array[3]) / (array[0] - array[2]);
+    double num1 = array[1] * numX + array[0];
+    double num2 = array[3] * numX + array[2];
     return (num1, num2);
 }
 
