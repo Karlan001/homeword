@@ -34,7 +34,7 @@ int[] FindNumberByPosition (int [,] matrix, int rowPosition, int columnPosition)
   int[] coord = new int[2];
   if (rowPosition <= matrix.GetLength(0) && columnPosition <= matrix.GetLength(1)){
     coord[0] = rowPosition;
-    coord[1] = columnPosition;
+    coord[1] = matrix[rowPosition, columnPosition];
   return coord;
   }
   else{
@@ -42,18 +42,16 @@ int[] FindNumberByPosition (int [,] matrix, int rowPosition, int columnPosition)
     return coord;
   }
 }
-int[,] array = CreateIncreasingMatrix(3, 4, 2);
 
 void PrintCheckIfError (int[] results, int X, int Y)
 {
   // Введите свое решение ниже
     if (results.Length > 1){
-    int[] arr = new int[2];
-    Console.WriteLine($"The number in [{X}, {Y}] is {array[X,Y]}");
+    Console.WriteLine($"The number in [{X}, {Y}] is {results[1]}");
     }    
     else Console.WriteLine("There is no such index");
 }
 
-
+int[,] array = CreateIncreasingMatrix(5, 4, 2);
 PrintArray(array);
-PrintCheckIfError(FindNumberByPosition(array, 8, 3), 8, 3);
+PrintCheckIfError(FindNumberByPosition(array, 2, 3), 2, 3);
